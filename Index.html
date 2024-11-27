@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 5</title>
+</head>
+<body>
+    <div id="Divington"> </div>
+    <Button onclick="swapAll('red', 'Skibidi dob', '50')">Click for Secrets</Button>
+    <Button onclick="swapAll('blue', 'dob dob', '75')">More secrets?...</Button>
+    <Button onclick="swapAll('green', 'mmmm yes yes yes', '100')">Not secret at this point</Button>
+    <script>
+        function swapAll(color, text, fontSize){
+        let Divington = document.getElementById('Divington').innerHTML = `
+              <div ${createStyle(color, fontSize)}> ${text} </div>
+              `;
+        }
+
+        function createStyle(color, fontSize){
+            return `style="${createBackgroundColor(color)} ${createFontSize(fontSize)}"`;
+        }
+
+        function createBackgroundColor(color){
+            return `background-color: ${color};`;
+        }
+
+        function createFontSize(fontSize){
+            return `font-size: ${fontSize}px;`;
+        }
+    </script>
+</body>
+</html>
